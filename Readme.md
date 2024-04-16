@@ -1,5 +1,11 @@
 [![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg)](https://savelife.in.ua/en/)
 
+## Contribution to this wiki
+
+Feel free to contribute to this wiki! If you have any information to add or correct, you can either create a GitHub Pull Request (PR) or open an issue with the details.
+
+[https://github.com/virtio-win/virtio-win.github.io](https://github.com/virtio-win/virtio-win.github.io)
+
 ## [Contribution](https://virtio-win.github.io/Contribution)
 
 ## [Development](https://virtio-win.github.io/Development)
