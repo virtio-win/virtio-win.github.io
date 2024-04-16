@@ -13,3 +13,5 @@
 * [https://virtio-win.github.io/Knowledge-Base/Tips-and-tricks.md](https://virtio-win.github.io/Knowledge-Base/Tips-and-tricks)
 
 * [https://virtio-win.github.io/Knowledge-Base/Virtiofs:-Shared-file-system.md](https://virtio-win.github.io/Knowledge-Base/Virtiofs:-Shared-file-system)
+
+* [https://virtio-win.github.io/Knowledge-Base/netkvm-RSC-(receive-segment-coalescing)-feature.md](https://virtio-win.github.io/Knowledge-Base/netkvm-RSC-(receive-segment-coalescing)-feature)
