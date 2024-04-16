@@ -1,9 +1,3 @@
----
-layout: post
-title:  "Builds and tags mapping"
-date:   2024-04-16 12:24:07 +0300
----
-
 | Tag | Build number | Download link |
 | --- | --- | --- |
 | mm205 | build 185 | https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/virtio-win-0.1.185-2/ |

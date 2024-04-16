@@ -1,9 +1,3 @@
----
-layout: post
-title:  "Building the drivers using Windows 11 21H2 EWDK"
-date:   2024-04-16 12:24:07 +0300
----
-
 # Steps required for building
 
 1. Download Windows 11 21H2 EWDK ISO (https://go.microsoft.com/fwlink/?linkid=2202360) and mount it (let's say to `E:\`). You can download the ISO to the host and connect it to the VM as CD-ROM.
@@ -27,13 +21,13 @@ date:   2024-04-16 12:24:07 +0300
 2. [CodeQL Windows Setup](https://docs.microsoft.com/en-us/windows-hardware/drivers/devtest/static-tools-and-codeql#codeql-windows-setup)
 * mkdir C:\codeql-home
 * Navigate to the Github [CodeQL Download Page](https://github.com/github/codeql-cli-binaries/releases/tag/v2.4.6)
-* Download version **2.4.6** of the zip file if you are certifying a driver for the Windows Hardware Compatibility Program in 2021. For example for 64 bit Windows "codeql-win64.zip".
+* Download version **2.4.6** of the zip file if you are certifying a driver for the Windows Hardware Compatibility Program in 2021. For example for 64 bit Windows "codeql-win64.zip". 
 * Unzip the codeql folder in the zip file to `C:\codeql-home\codeql\` directory.
 * Confirm that the CodeQL command works by displaying the help. `C:\codeql-home\codeql\>codeql --help`
 
 3. [Clone the repository to access the driver-specific queries](https://docs.microsoft.com/en-us/windows-hardware/drivers/devtest/static-tools-and-codeql#clone-the-repository-to-access-the-driver-specific-queries)
 * Navigate to the [Microsoft CodeQL GitHub repository](https://github.com/microsoft/Windows-Driver-Developer-Supplemental-Tools).
-* [Clone](https://github.com/git-guides/git-clone) the repository to download all CodeQL queries and [query suites](https://codeql.github.com/docs/codeql-cli/creating-codeql-query-suites/) with driver-specific queries.
+* [Clone](https://github.com/git-guides/git-clone) the repository to download all CodeQL queries and [query suites](https://codeql.github.com/docs/codeql-cli/creating-codeql-query-suites/) with driver-specific queries.  
 ```command
 C:\codeql-home\>git clone https://github.com/microsoft/Windows-Driver-Developer-Supplemental-Tools.git --recursive -b RELEASE_BRANCH
 ```
@@ -57,7 +51,7 @@ Windows 11 21H2 EWDK is the recommended environment for drivers build.
 The building of drivers for the following operating systems is not supported by the batch build procedure:
 * Windows XP / Server 2003
 * Windows Vista / Server 2008
-* Windows 7 / Server 2008R2
+* Windows 7 / Server 2008R2 
 
 Note: latest tag that supports the building of drivers for legacy operating systems:
 * https://github.com/virtio-win/kvm-guest-drivers-windows/releases/tag/08.03.2021-last-buldable-point-XP

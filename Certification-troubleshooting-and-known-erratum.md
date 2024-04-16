@@ -1,8 +1,4 @@
----
-layout: post
-title:  "Certification troubleshooting and known erratum"
-date:   2024-04-16 12:24:07 +0300
----
+# General
 
 ## Windows Server 2022
 
@@ -58,11 +54,11 @@ done
 https://docs.microsoft.com/en-us/windows-hardware/test/hlk/testref/b3c41a3f-b844-4c2d-b115-dad51a37f123
 
 #### Solution
-Set test job parameter _NumberOfUsbTypeCPorts_ to 0.
+Set test job parameter _NumberOfUsbTypeCPorts_ to 0. 
 
 ### RSC test
 
-For Server 2022, please use this playlist - "HLK Version 21H2 CompatPlaylist x64 ARM64 server".
+For Server 2022, please use this playlist - "HLK Version 21H2 CompatPlaylist x64 ARM64 server". 
 
 #### MS recommendation
 https://techcommunity.microsoft.com/t5/windows-hardware-certification/windows-11-amp-server-2022-hlk-kit-guidance-for-creating-new/ba-p/2567481

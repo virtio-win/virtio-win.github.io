@@ -1,9 +1,3 @@
----
-layout: post
-title:  "NetKVM WMI interface (netkvm wmi.cmd)"
-date:   2024-04-16 12:24:08 +0300
----
-
 **[netkvm-wmi.cmd](https://github.com/virtio-win/kvm-guest-drivers-windows/blob/master/NetKVM/DebugTools/WMI/netkvm-wmi.cmd)** is a simple developer-oriented tool that allows access to NetKVM driver to query or control the behavior of the driver.
 
 It is based on WMI interface of the network driver: WMI commands are converted to custom OID that the OS sends to the NetKVM driver.
@@ -15,10 +9,10 @@ In case of multiple NetKVM devices (multiple network adapters) each command of t
 Examples of most useful commands are:
 * query initial configuration
 
-`` netkvm-wmi.cmd cfg``
+`` netkvm-wmi.cmd cfg`` 
 * query all run-time statistics:
 
-`` netkvm-wmi.cmd stat``
+`` netkvm-wmi.cmd stat`` 
 * query run-time RSS statistics
 
 `` netkvm-wmi.cmd rss``
