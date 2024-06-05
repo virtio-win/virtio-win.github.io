@@ -3,7 +3,7 @@
 ## For Windows 10, Windows Server 2022
 1.  Download Windows 11 21H2 EWDK ISO (https://go.microsoft.com/fwlink/?linkid=2202360) and mount it (let's say to `E:\`). You can download the ISO to the host and connect it to the VM as CD-ROM.
 
-## For Windows 11
+## For Windows 11, Windows Server 2025
 2. Download Windows 11 24H2 EWDK ISO (https://go.microsoft.com/fwlink/?linkid=2271957) and mount it (let's say to `F:\`). You can download the ISO to the host and connect it to the VM as CD-ROM.
 
 ## General steps
@@ -21,26 +21,26 @@
 # Additional steps for driver development
 
 1. Copy Windows 11, version 24H2 EWDK to a local directory
-   * Download Windows 11, version 24H2 EWDK (released May 22, 2024) with Visual Studio Buildtools 17.8.6 ISO (https://go.microsoft.com/fwlink/?linkid=2271957) and mount it (let's say to `E:\`).
+   * Download Windows 11, version 24H2 EWDK (released May 22, 2024) with Visual Studio Buildtools 17.8.6 ISO [https://go.microsoft.com/fwlink/?linkid=2271957](https://go.microsoft.com/fwlink/?linkid=2271957) and mount it (let's say to `E:\`).
    * copy entire content to local directory (c:\ewdk11_24h2): `mkdir c:\ewdk11_24h2 && xcopy /e e:\* c:\ewdk11_24h2`
    * unmount and delete Windows 11 24H2 EWDK ISO file
    * Set ALL USER environment variable `set EWDK11_24H2_DIR=c:\ewdk11_24h2`
 
 1. Copy Windows 11, version 21H2 EWDK to a local directory
-   * Download Windows 11 21H2 EWDK with Visual Studio Build Tools 16.11.10 ISO (https://go.microsoft.com/fwlink/?linkid=2202360) and mount it (let's say to `E:\`).
+   * Download Windows 11 21H2 EWDK with Visual Studio Build Tools 16.11.10 ISO [https://go.microsoft.com/fwlink/?linkid=2202360](https://go.microsoft.com/fwlink/?linkid=2202360) and mount it (let's say to `E:\`).
    * copy entire content to local directory (c:\ewdk11): `mkdir c:\ewdk11 && xcopy /e e:\* c:\ewdk11`
    * unmount and delete Wirndows 11 21H2 EWDK ISO file
    * Set ALL USER environment variable `set EWDK11_DIR=c:\ewdk11`
 
 1. Copy DVL from EWDK for Windows 10, version 1903 to a local directory
-   * Download EWDK for Windows 10, version 1903 with Visual Studio Build Tools 16.0 ISO (https://go.microsoft.com/fwlink/p/?linkid=2086136) and mount it (let's say to `E:\`).
+   * Download EWDK for Windows 10, version 1903 with Visual Studio Build Tools 16.0 ISO [https://go.microsoft.com/fwlink/p/?linkid=2086136](https://go.microsoft.com/fwlink/p/?linkid=2086136) and mount it (let's say to `E:\`).
    * mkdir C:\dvl1903
    * copy all files (`dvl.exe`, `Microsoft.StaticToolsLogo.ObjectModel.dll`) from `E:\Program Files\Windows Kits\10\Tools\dvl` to `C:\dvl1903`
    * unmount and delete Wirndows 10 version 1903 EWDK ISO file
 
-1. Download and install WinFSP 2023 (https://github.com/winfsp/winfsp/releases/tag/v2.0) with the "Core", "Developer" and "Kernel Developer" feature enabled.
-1. Download and install CPDK 8.0 (https://www.microsoft.com/en-us/download/details.aspx?id=30688).
-1. Download and install .NET Framework version 4.8 (https://dotnet.microsoft.com/download/dotnet-framework/thank-you/net48-web-installer). Windows Server 2022 and Windows 11 don't need it.
+1. Download and install WinFSP 2023 [https://github.com/winfsp/winfsp/releases/tag/v2.0](https://github.com/winfsp/winfsp/releases/tag/v2.0) with the "Core", "Developer" and "Kernel Developer" feature enabled.
+1. Download and install CPDK 8.0 [https://www.microsoft.com/en-us/download/details.aspx?id=30688](https://www.microsoft.com/en-us/download/details.aspx?id=30688).
+1. Download and install .NET Framework version 4.8 [https://dotnet.microsoft.com/download/dotnet-framework/thank-you/net48-web-installer](https://dotnet.microsoft.com/download/dotnet-framework/thank-you/net48-web-installer). Windows Server 2022 and Windows 11 don't need it.
 
 1. [CodeQL Windows Setup](https://docs.microsoft.com/en-us/windows-hardware/drivers/devtest/static-tools-and-codeql#codeql-windows-setup) for Windows 11 24H2
    * **IF YOU HAVE EXISTING CODEQL INSTALLED REMOVE IT**
