@@ -88,6 +88,13 @@
 
 # Notes on the build batch
 
+Legacy build steps:
+   - [Building the drivers using Windows 11 22H2 EWDK](https://virtio-win.github.io/Development/Building-the-drivers-using-Windows-11-22H2-EWDK)
+   - [Building the drivers using Windows 11 21H2 EWDK](https://virtio-win.github.io/Development/Building-the-drivers-using-Windows-11-21H2-EWDK)
+   - [Building the drivers using Visual Studio 2017](https://virtio-win.github.io/Development/Building-the-drivers-using-Visual-Studio-2017)
+   - [Building the drivers using EWDK 1903-2004](https://virtio-win.github.io/Development/Building-the-drivers-using-EWDK-1903-2004)
+   - [Building the drivers using Enterprise WDK (EWDK) 1809](https://virtio-win.github.io/Development/Building-the-drivers-using-Enterprise-WDK-(EWDK)-1809)
+
 The building of drivers for the following operating systems is not supported by the batch build procedure:
    * Windows XP / Server 2003
    * Windows Vista / Server 2008
