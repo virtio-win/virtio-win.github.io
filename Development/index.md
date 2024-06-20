@@ -16,7 +16,7 @@
 
 * [https://virtio-win.github.io/Development/Driver-signing-and-certification.md](https://virtio-win.github.io/Development/Driver-signing-and-certification)
 
-* [https://virtio-win.github.io/Development/git-and-cr\lf.md](https://virtio-win.github.io/Development/git-and-cr\lf)
+* [https://virtio-win.github.io/Development/git-and-cr\lf.md](https://virtio-win.github.io/Development/git-and-cr%5Clf)
 
 * [https://virtio-win.github.io/Development/Old-build-configurations.md](https://virtio-win.github.io/Development/Old-build-configurations)
 
