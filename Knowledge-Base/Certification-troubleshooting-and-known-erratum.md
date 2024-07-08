@@ -1,5 +1,33 @@
 # General
 
+## Windows Server 2025 / Windows 11 24H2
+
+### Display capture tests* GPU tests (3 on Client)
+
+#### Error
+```
+Cannot generate display to capture mappings without a display engine, capture card, and toolbox. 
+Unable to determine any display output to display capture device mappings - tests cannot continue.
+No board detected!
+```
+
+#### Solution 
+
+Errata/Filter#166032 for `boolean(//Device[starts-with(@Name,"VMware")] | //Device[starts-with(@Name,"Red Hat VirtIO")])`
+
+### NdisStudio* network tests (5 on Server, 3 on Client)
+
+#### Error
+```
+Desktop: Failed to install NdisStudio.inf (Error: 0x800B0101 - A required certificate is not within its validity period when verifying against the current system clock or the timestamp in the signed file.)
+An unexpected error occurred while validating driver package. Catalog = NdisStudio.cat, Error = 0x800B0101
+```
+
+#### Solution
+
+Request errata from Microsoft or wait for a new HLK kit with a solution
+
+
 ## Windows Server 2022
 
 ### **USB Generic HID Test** error "No MUTT devices were detected"
