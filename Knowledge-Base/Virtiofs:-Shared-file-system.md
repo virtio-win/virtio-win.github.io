@@ -28,8 +28,14 @@ Following XML should be added to your libvirt VM descrition:
     <filesystem type="mount" accessmode="passthrough">
       <driver type="virtiofs" queue="1024"/>
       <source dir="/home/user/viofs"/>
-      <target dir="mount_tag"/>
+      <target dir="mount_tag0"/>
       <address type="pci" domain="0x0000" bus="0x06" slot="0x00" function="0x0"/>
+    </filesystem>
+    <filesystem type="mount" accessmode="passthrough">
+      <driver type="virtiofs" queue="1024"/>
+      <source dir="/home/user/viofs"/>
+      <target dir="mount_tag1"/>
+      <address type="pci" domain="0x0000" bus="0x07" slot="0x00" function="0x0"/>
     </filesystem>
   </devices>
   ...
@@ -136,15 +142,19 @@ Virtiofs configuration for WinFsp.Launcher:
 ```
 Corresponding data is now available to view and edit under `HKLM\SOFTWARE\WOW6432Node\WinFsp\Services\virtiofs` registry key.
 
+Also you may need to run virtiofs.exe as an administrator:
+* either from administrator console
+* or [specifying an administrator](https://superuser.com/questions/1694930/do-windows-services-have-elevated-privileges) user for your service
+
 #### Mount
 
-Mount virtiofs with tag `mount_tag0` to `Y:\`:
+Mount virtiofs as a global drive with tag `mount_tag0` to `Y:\`:
 ```
-"C:\Program Files (x86)\WinFsp\bin\launchctl-x64.exe" start virtiofs viofsY mount_tag0 Y:
+"C:\Program Files (x86)\WinFsp\bin\launchctl-x64.exe" start virtiofs viofsY mount_tag0 \\.\Y:
 ```
-Mount virtiofs with tag `mount_tag1` to `Z:\`:
+Mount virtiofs as a global drive with tag `mount_tag1` to `Z:\`:
 ```
-"C:\Program Files (x86)\WinFsp\bin\launchctl-x64.exe" start virtiofs viofsZ mount_tag1 Z:
+"C:\Program Files (x86)\WinFsp\bin\launchctl-x64.exe" start virtiofs viofsZ mount_tag1 \\.\X:
 ```
 Here `viofsY` and `viofsZ` are instance names for WinFsp.Launcher. They are selected arbitrary, but must differ between instances.
 ![image](https://user-images.githubusercontent.com/8286747/190429409-b4c42336-4292-4d91-8cb0-292736b17307.png)
