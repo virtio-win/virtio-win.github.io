@@ -27,6 +27,23 @@ An unexpected error occurred while validating driver package. Catalog = NdisStud
 
 Request errata from Microsoft or wait for a new HLK kit with a solution
 
+### NDISTest 6.5 - [2 Machine] - GlitchFree Device on Win2025 / Win11 24H2
+
+#### Error 
+
+```
+“Analyzer detected XXX errors with packets per DPC = XXX”
+The test has 3 iterations (packets per DPC = 10,100,1000), each iteration fail with the same error, only number of errors during the iteration may differ
+```
+
+#### Solution 
+
+```
+Errata/filter#175565 to include 'boolean(//Devnode[
+or contains(.,''PCI\VEN_1AF4&DEV_1000'')
+or contains(.,''PCI\VEN_1AF4&DEV_1041'')
+{"Field":"KitVersion","MatchType":2,"Values":["10.1.26100"]}'
+```
 
 ## Windows Server 2022
 
