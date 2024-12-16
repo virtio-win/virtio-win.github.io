@@ -34,7 +34,7 @@ Feel free to contribute to this wiki! If you have any information to add or corr
 
 * [git and cr\lf](https://virtio-win.github.io/Development/git-and-cr%5Clf)
 
-* [Building the drivers using Enterprise WDK for Windows 11 (EWDK)](https://virtio-win.github.io/Development/Building-the-drivers-using-Windows-11-21H2-EWDK)
+* [Building the drivers using Enterprise WDK for Windows 11 (EWDK)](https://virtio-win.github.io/Development/Building-the-drivers-using-Windows-11-24H2-EWDK)
 
 * [Old build configurations](https://virtio-win.github.io/Development/Old-build-configurations)
 
