@@ -14,6 +14,8 @@
 
 * [https://virtio-win.github.io/Development/Building-the-drivers-using-Windows-11-22H2-EWDK.md](https://virtio-win.github.io/Development/Building-the-drivers-using-Windows-11-22H2-EWDK)
 
+* [https://virtio-win.github.io/Development/Building-the-drivers-using-Windows-11-24H2-EWDK.md](https://virtio-win.github.io/Development/Building-the-drivers-using-Windows-11-24H2-EWDK)
+
 * [https://virtio-win.github.io/Development/Driver-signing-and-certification.md](https://virtio-win.github.io/Development/Driver-signing-and-certification)
 
 * [https://virtio-win.github.io/Development/git-and-cr\lf.md](https://virtio-win.github.io/Development/git-and-cr%5Clf)
