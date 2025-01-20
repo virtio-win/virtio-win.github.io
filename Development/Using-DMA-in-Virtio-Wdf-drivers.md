@@ -1,5 +1,3 @@
-**(This page is under construction)**
-
 All the operations required for DMA transfer must be implemented via WDF DMA API and not via legacy routines for physical memory manipulation (otherwise the device driver is not compatible with IOMMU and VIRTIO_F_ACCESS_PLATFORM feature). These operations include:
 * Allocation of physical memory suitable for DMA transfer
 * Obtaining physical/virtual addresses of allocated memory blocks
@@ -9,19 +7,17 @@ Virtio-WDF library includes necessary procedures to simplify implementation of D
 
 ## Initialization
 
-No special initialization for DMA operations.
-When the driver calls VirtIOWdfInitialize (typically from EvtDevicePrepareHardware procedure) the library initializes also WDFDMAENABLER object for the device. The library uses it during device lifecycle for DMA operations.
+The driver should call ``VirtIOWdfInitialize`` (typically from ``EvtDevicePrepareHardware`` procedure).  The library will initialize WDFDMAENABLER object for the device. The library will use it during device lifecycle for DMA operations.
 
 ## Clean-up:
 
-No special clean-up for DMA operations.
-When the driver calls VirtIOWdfShutdown (typically from EvtDeviceReleaseHardware) the library destroys also WDFDMAENABLER object
+The driver should call ``VirtIOWdfShutdown`` (typically from ``EvtDeviceReleaseHardware``). The library will destroy the WDFDMAENABLER object.
 
 ## Allocation of contiguous memory buffer suitable for DMA transfer
 
-Use this method of allocation when you need memory blocks of one or more 4K pages
-
 ``void *VirtIOWdfDeviceAllocDmaMemory(VirtIODevice *vdev, size_t size, ULONG groupTag)``
+
+Use this method of allocation when you need memory blocks of one or more 4K pages
 
 **size** - block size to allocate
 
@@ -63,9 +59,9 @@ in case of success: physical address of the provided virtual address
 
 ## Allocation of sliced memory block
 
-Use this method of allocation when you need many small chunks of physical memory of the same size
-
 ``PVIRTIO_DMA_MEMORY_SLICED VirtIOWdfDeviceAllocDmaMemorySliced(VirtIODevice *vdev, size_t blockSize, ULONG sliceSize)``
+
+Use this method of allocation when you need many small chunks of physical memory of the same size
 
 This procedure allocates block of one or more 4K pages from which you can allocate and free small memory slices.
 
