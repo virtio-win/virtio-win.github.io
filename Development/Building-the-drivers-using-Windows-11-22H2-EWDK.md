@@ -15,7 +15,7 @@
 7. Run `build_AllNoSdv.bat [Win10|Win11]` depending on your Windows version.
    - Choose `Win10` for Windows 10, Windows Server 2022 (x86, x64, ARM64)
    - Choose `Win11` for Windows 11 (x86 (several UMD only), x64, ARM64)
-8. Run `Tools\signAll.bat` to sign drivers. Loading of test-signed drivers must be enabled on your system (https://docs.microsoft.com/en-us/windows-hardware/drivers/install/the-testsigning-boot-configuration-option).
+8. Run `build\signAll.bat` to sign drivers. Loading of test-signed drivers must be enabled on your system (https://docs.microsoft.com/en-us/windows-hardware/drivers/install/the-testsigning-boot-configuration-option).
 9. Find drivers/services in folders named `Install` inside driver folders.
 
 
