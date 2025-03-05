@@ -7,7 +7,7 @@
 5. Open command-line and run `E:\LaunchBuilEnv.cmd`.
 6. Change directory to `kvm-guest-drivers-windows`.
 7. Run `build_AllNoSdv.bat [Win8|Win8.1|Win10]` depending on your Windows version. Choose `Win10` for Windows Server 2022 and Windows 11.
-8. Run `Tools\signAll.bat` to sign drivers. Loading of test-signed drivers must be enabled on your system (https://docs.microsoft.com/en-us/windows-hardware/drivers/install/the-testsigning-boot-configuration-option).
+8. Run `build\signAll.bat` to sign drivers. Loading of test-signed drivers must be enabled on your system (https://docs.microsoft.com/en-us/windows-hardware/drivers/install/the-testsigning-boot-configuration-option).
 9. Find drivers/services in folders named `Install` inside driver folders.
 
 # Additional steps for driver development
