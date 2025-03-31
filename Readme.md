@@ -38,8 +38,6 @@ Feel free to contribute to this wiki! If you have any information to add or corr
 
 * [Old build configurations](https://virtio-win.github.io/Development/Old-build-configurations)
 
-* Code signing drivers for the Windows 64bit platforms
-
 * [Submitting patches](https://virtio-win.github.io/Contribution/Submitting-patches)
 
 * [Windows guest drivers debugging](http://www.slideshare.net/YanVugenfirer/windows-guestdebugging-kvmforum2012)
