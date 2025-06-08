@@ -2,9 +2,10 @@
 
 Virtiofs is a shared file system that lets virtual machines access a directory tree on the host. More information on the underlying approach is available at [virtio-fs.gitlab.io](https://virtio-fs.gitlab.io/). Virtiofs for Windows is a user mode file system, implemented using [WinFsp framework](https://github.com/billziss-gh/winfsp). Virtiofs consists of VirtIO-powered driver and user-space service based on WinFsp.
 
+This guide includes setup instructions for QEMU and libvirt, and for Windows guests specifically.
 # Status
 
-Virtiofs is at an early stage of development and should be considered as a "Tech Preview" feature. To see what may not work, please check [known limitations](#known-limitations).
+Virtio-FS is a supported feature. For current known issues, visit the [Virtio-FS GitHub issues page](https://github.com/virtio-win/kvm-guest-drivers-windows/issues?q=is%3Aissue%20state%3Aopen%20label%3Avirtio-fs).
 
 # Setup
 
@@ -33,7 +34,7 @@ Following XML should be added to your libvirt VM descrition:
     </filesystem>
     <filesystem type="mount" accessmode="passthrough">
       <driver type="virtiofs" queue="1024"/>
-      <source dir="/home/user/viofs"/>
+      <source dir="/home/user/vm_share"/>
       <target dir="mount_tag1"/>
       <address type="pci" domain="0x0000" bus="0x07" slot="0x00" function="0x0"/>
     </filesystem>
@@ -65,24 +66,32 @@ Adjust following QEMU command-line parameters:
 
 ### virtiofsd
 
-Modern virtiofsd is written in Rust and supported here: https://gitlab.com/virtio-fs/virtiofsd
-
-To build virtiofsd:
-```
-cargo build
-```
+The `virtiofsd` daemon is required on the host to enable Virtio-FS for guests.
+* #### Installation (Recommended)
+  On `Fedora` virtiofsd is available via the package manager.  
+  ```
+  sudo dnf install virtiofsd
+  ```
+* #### Building from Source (Alternative)
+  Modern virtiofsd is written in Rust and supported here: https://gitlab.com/virtio-fs/virtiofsd.  
+  To build virtiofsd:
+  ```
+  cargo build
+  ```
 
 
 ## Guest
 
 ### Setup with installer
 1. Download and install [WinFSP](https://github.com/billziss-gh/winfsp/releases) with at least "Core" feature enabled.
-2. Install virtiofs driver and service from [VirtIO-Win package](https://github.com/virtio-win/virtio-win-pkg-scripts/blob/master/README.md).
+2. Install the virtiofs driver and service using the [installation wizard](https://github.com/virtio-win/virtio-win.github.io/blob/main/Knowledge-Base/Driver-installation.md#variant-1-using-the-installation-wizard).
 
 ### Manual setup (for development purposes)
 1. Download and install [WinFSP](https://github.com/billziss-gh/winfsp/releases) with at least "Core" feature enabled. If you plan to make changes to virtiofs driver or service then enable "Core", "Developer" and "Kernel Developer" features in the installer.
 2. Install virtiofs driver with Device Manager or `pnputil.exe`.
-3. Setup virtiofs service by running `sc create VirtioFsSvc binPath="<path to the binary>\virtiofs.exe" start=auto depend=VirtioFsDrv`. Don't forget to appropriately set `binPath`.
+3. Setup virtiofs service by running  
+   `sc create VirtioFsSvc binPath="<path to the binary>\virtiofs.exe" start=auto depend=VirtioFsDrv`.  
+   Don't forget to appropriately set `binPath`.
 4. You can immediately start the service by running `sc start VirtioFsSvc`. The service will start automatically on boot. Virtiofs uses the first available drive letter starting with `Z:` unless no mount-point is specified.
 
 ![](https://user-images.githubusercontent.com/8286747/151011858-c9d122d2-d95a-421c-9914-c7d4dd05e2e3.png)
@@ -119,7 +128,11 @@ Also, parameters named `OverflowUid` and `OverflowGid` are always parsed from th
 
 ### Case insensitivity
 
-*At the moment, the case insensitivity feature is under development and may not work properly in some cases.* Case insensitivity can be turned on by `-i` command-line parameter of `CaseInsensitive` registry key. In this situation, when processing a request, virtiofs first tries to access the file or directory by its exact name, as in case-sensitive mode. Second, if there is no such node, virtiofs finds a node with a matching name in the parent directory, ignoring case.
+Case insensitivity can be turned on by 
+* `-i` command-line parameter. 
+* `CaseInsensitive` registry key with type `DWORD` and value `1`.  
+  
+In this situation, when processing a request, virtiofs first tries to access the file or directory by its exact name, as in case-sensitive mode. Second, if there is no such node, virtiofs finds a node with a matching name in the parent directory, ignoring case.
 
 ### File system name
 
