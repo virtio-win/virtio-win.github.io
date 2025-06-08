@@ -23,6 +23,8 @@ Feel free to contribute to this wiki! If you have any information to add or corr
 * [NetKVM - WMI tool](https://virtio-win.github.io/Knowledge-Base/NetKVM-WMI-interface-(netkvm-wmi.cmd))
 
 * [Using DMA in Virtio WDF drivers](https://virtio-win.github.io/Development/Using-DMA-in-Virtio-Wdf-drivers)
+  
+* [Virtiofs - Quick Start](https://virtio-win.github.io/Knowledge-Base/Virtiofs-qs.md)
 
 * [Virtiofs - Shared file system](https://virtio-win.github.io/Knowledge-Base/Virtiofs:-Shared-file-system)
 
