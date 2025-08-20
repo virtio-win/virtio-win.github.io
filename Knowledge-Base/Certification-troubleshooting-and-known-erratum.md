@@ -45,6 +45,20 @@ or contains(.,''PCI\VEN_1AF4&DEV_1041'')
 {"Field":"KitVersion","MatchType":2,"Values":["10.1.26100"]}'
 ```
 
+### NDISTest 6.0 - [2 Machine] - 2c_Mini6Stress test
+
+#### Solution
+
+Errata/Filter: #235476
+
+### NDISTest 6.5 - [2 Machine] - CheckConnectivity with AutoFail
+
+#### Solution
+
+Manual errata #239888 (Expiration Date: 8/13/2026) for Red Hat Company, Red Hat VirtIO NetKVM Drivers for Windows Server 2025 and Red Hat VirtIO NetKVM Drivers for Windows 11 model
+
+Request errata from Microsoft or wait for a new HLK kit with a solution
+
 ## Windows Server 2022
 
 ### **USB Generic HID Test** error "No MUTT devices were detected"
