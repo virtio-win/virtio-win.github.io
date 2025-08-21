@@ -59,6 +59,16 @@ Manual errata #239888 (Expiration Date: 8/13/2026) for Red Hat Company, Red Hat 
 
 Request errata from Microsoft or wait for a new HLK kit with a solution
 
+### DXGI Gamma Ramps (viogpu driver)
+
+#### Solution
+
+Errata/filters: 
+ - #5226 (version 8) 
+ - #5229 (version 9). 
+  
+ **Note:** Versions are mandatory because it does not have any HLK kit or Windows version limitation.
+
 ## Windows Server 2022
 
 ### **USB Generic HID Test** error "No MUTT devices were detected"
