@@ -59,6 +59,14 @@ Manual errata #239888 (Expiration Date: 8/13/2026) for Red Hat Company, Red Hat 
 
 Request errata from Microsoft or wait for a new HLK kit with a solution
 
+### OptStandby - Video Memory Purge and Resume (viogpudo driver)
+
+#### Solution
+
+Errata/Filter: #40325
+
+**Note:** Filter #40325 covers both Windows 11 24H2 and Windows 11 25H2.
+
 ### DXGI Gamma Ramps (viogpu driver)
 
 #### Solution
