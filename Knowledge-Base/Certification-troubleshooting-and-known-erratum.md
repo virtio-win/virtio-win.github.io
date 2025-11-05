@@ -15,6 +15,19 @@ No board detected!
 
 Errata/Filter#166032 for `boolean(//Device[starts-with(@Name,"VMware")] | //Device[starts-with(@Name,"Red Hat VirtIO")])`
 
+### Display capture tests - Display Mode Change Performance (viogpudo driver)
+
+#### Error
+```
+AreNotEqual(targetsToTest.size(), (size_t)0): Failed to find any targets to test, please check the system configuration and connected monitors - Values (0, 0)
+```
+
+#### Solution
+
+Errata/Filter: #166032 (version 9)
+
+**Note:** Filter #166032 covers both Windows 11 24H2 and Windows 11 25H2.
+
 ### NdisStudio* network tests (5 on Server, 3 on Client)
 
 #### Error
