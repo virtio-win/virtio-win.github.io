@@ -15,3 +15,9 @@
 * [https://virtio-win.github.io/Knowledge-Base/Virtiofs:-Shared-file-system.md](https://virtio-win.github.io/Knowledge-Base/Virtiofs:-Shared-file-system)
 
 * [https://virtio-win.github.io/Knowledge-Base/netkvm-RSC-(receive-segment-coalescing)-feature.md](https://virtio-win.github.io/Knowledge-Base/netkvm-RSC-(receive-segment-coalescing)-feature)
+
+* [https://virtio-win.github.io/Knowledge-Base/Qemu-ga-win.md](https://virtio-win.github.io/Knowledge-Base/Qemu-ga-win)
+
+* [https://virtio-win.github.io/Knowledge-Base/Virtiofs-qs.md](https://virtio-win.github.io/Knowledge-Base/Virtiofs-qs)
+
+* [https://virtio-win.github.io/Knowledge-Base/Windows-arm64-vm-using-qemu.md](https://virtio-win.github.io/Knowledge-Base/Windows-arm64-vm-using-qemu)
