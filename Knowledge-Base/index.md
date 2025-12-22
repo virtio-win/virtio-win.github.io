@@ -14,6 +14,8 @@
 
 * [QEMU Guest Agent (qemu-ga) on Windows](https://virtio-win.github.io/Knowledge-Base/Qemu-ga-win)
 
+* [SSH over VSock](https://virtio-win.github.io/Knowledge-Base/SSH-over-VSock)
+
 * [Tips and tricks](https://virtio-win.github.io/Knowledge-Base/Tips-and-tricks)
 
 * [Virtio-fs Quick start](https://virtio-win.github.io/Knowledge-Base/Virtiofs-qs)
