@@ -93,7 +93,7 @@ More information on libvirt virtiofs options is provided in [libvirt docs](https
 #### 1. Start virtiofsd daemon [(install or build it if missing)](#virtiofsd):
 
 ```
-/usr/libexec/virtiofsd --socket-path=/tmp/virtiofs_socket -o source=/home/user/viofs
+/usr/libexec/virtiofsd --socket-path=/tmp/virtiofs_socket --shared-dir /home/user/viofs
 ```
 
 The socket path will also need to be passed to QEMU below.  
@@ -187,7 +187,7 @@ Virtiofs service can parse following settings from command-line:
   -o UID:GID          [host owner UID:GID]
 ```
 
-Since command-line arguments can't be assigned to Windows service permanently, virtiofs can parse them from the registry. When command-line arguments are absent the service looks up for the following parameters under `HKLM\Software\virtiofs`:
+Since command-line arguments can't be assigned to Windows service permanently, virtiofs can parse them from the registry. When command-line arguments are absent the service looks up for the following parameters under `HKLM\Software\VirtIO-FS`:
 * `DebugFlags` (DWORD)
 * `DebugLogFile` (String)
 * `MountPoint` (String)
