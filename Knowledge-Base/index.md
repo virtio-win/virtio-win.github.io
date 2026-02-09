@@ -6,6 +6,8 @@
 
 * [Driver installation](https://virtio-win.github.io/Knowledge-Base/Driver-installation)
 
+* [Test-signed driver installation](https://virtio-win.github.io/Knowledge-Base/Test-Driver-installation)
+
 * [Matching build to source](https://virtio-win.github.io/Knowledge-Base/Matching-build-to-source)
 
 * [NetKVM WMI interface (netkvm-wmi.cmd)](https://virtio-win.github.io/Knowledge-Base/NetKVM-WMI-interface-(netkvm-wmi.cmd))
