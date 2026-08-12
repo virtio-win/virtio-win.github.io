@@ -49,3 +49,5 @@ Feel free to contribute to this wiki! If you have any information to add or corr
 * [Driver signing and certification](https://virtio-win.github.io/Development/Driver-signing-and-certification)
 
 * [Builds and tags mapping](https://virtio-win.github.io/Knowledge-Base/Builds-and-tags-mapping)
+
+* [Driver for legacy Windows systems](https://virtio-win.github.io/Knowledge-Base/Legacy-Windows-Drivers)
