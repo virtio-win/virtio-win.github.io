@@ -7,7 +7,7 @@ This page provides help how to use virtio-win, spice-guest-agent, and qemu-guest
 This is the best option for regular users that just want to install the drivers on their VM
 
 1. **Download Virtio-Win ISO:**
-   - Download the Virtio-Win ISO file to your host machine here: https://github.com/arfshl/virtio-win-legacy/releases/download/virtio-win-legacy/virtio-win-legacy.iso
+   - Download the Virtio-Win ISO file to your host machine here: https://github.com/arfshl/virtio-win-legacy
 
 2. **Attach the Virtio-Win ISO to the VM:**
    - Ensure your VM is powered on and running.
@@ -87,7 +87,7 @@ By following these steps, you can successfully install the required drivers, suc
 Using virtio-blk disk instead of IDE disk can dramatically improve your virtual disk I/O speed. to installing virtio-blk drivers, follow this instructions:
 
 1. **Download Virtio-Win Floppy:**
-   - Download the Virtio-Win Floppy file to your host machine here: [32-bit](https://github.com/arfshl/virtio-win-legacy/releases/download/virtio-win-legacy/virtio-win-0.1.190_x86.vfd) | [64-bit](https://github.com/arfshl/virtio-win-legacy/releases/download/virtio-win-legacy/virtio-win-0.1.190_amd64.vfd) 
+   - Download the Virtio-Win Floppy file to your host machine here: https://github.com/arfshl/virtio-win-legacy/releases/tag/virtio-win-legacy
 
 2. **Attach the Virtio-Win Floppy to the VM:**
    - Ensure your VM is powered on and running.
@@ -202,3 +202,5 @@ Using virtio-blk disk instead of IDE disk can dramatically improve your virtual 
    ```
 
    This command will show a list of installed driver packages.
+
+   Source package: https://github.com/arfshl/virtio-win-legacy/releases/download/virtio-win-legacy/SOURCES.txt
